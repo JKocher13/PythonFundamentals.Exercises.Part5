@@ -25,6 +25,7 @@ def print_list_items(list_in: List) -> None:
         print(i)
 
 
+
 def sort_by_commit_count(list_in: List) -> List:
     """
     Given a list of entries, return a new list sorted based on the commit count.
@@ -86,11 +87,8 @@ def remove_evens(list_in: List[int]) -> None:
 
     :return: None
     """
-    x = 0
-    for n in list_in:
-        if n%2==0:
-            list_in.pop(x)
-        x=x+1
+    x = [value for value in list_in if value%2 != 0]
+    print(x)
 
 def concatenate_lists(list_a: List, list_b: List) -> List:
     """
@@ -113,3 +111,4 @@ def multiply_list(list_in: List, scalar: int) -> List:
     :return: A list
     """
     return list_in*scalar 
+
